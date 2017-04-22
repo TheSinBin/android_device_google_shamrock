@@ -103,6 +103,24 @@ TARGET_KERNEL_ARCH := arm
 # Media
 TARGET_HAVE_SIGNED_VENUS_FW := true
 
+# MultiRom Config
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/google/shamrock/multirom/mr_init_devices.c
+MR_DPI := xxhdpi
+MR_KEXEC_MEM_MIN := 0x0
+MR_KEXEC_DTB := true
+MR_PIXEL_FORMAT := "RGBX_8888"
+MR_ENCRYPTION := false
+MR_USE_QCOM_OVERLAY := true
+MR_QCOM_OVERLAY_HEADER := device/google/shamrock/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+MR_DPI_MUL := 1.5
+MR_DPI_FONT := 420
+MR_FSTAB := device/google/shamrock/rootdir/recovery.fstab
+
+
+
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
